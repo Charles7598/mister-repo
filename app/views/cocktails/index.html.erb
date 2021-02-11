@@ -1,0 +1,9 @@
+<h1> List of cocktails 🍹</h1>
+
+<ul>
+  <% @cocktails.each do |r| %>
+  <li><%= r.name %></li>
+  <hr>
+  <% end %>
+</ul>
+<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary"%>

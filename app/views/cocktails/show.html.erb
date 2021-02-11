@@ -1,0 +1,9 @@
+<h1>Your chosen one 🍸</h1>
+
+<ul>
+  <li>Name : <%= @cocktail.name %></li>
+  <%# <li>What's in this : <%= @dose.description %></li>
+  <hr>
+</ul>
+  <%= link_to "Dose", new_cocktail_dose, class:"btn btn-primary" %>
+  <%= link_to "Cocktail List", cocktails_path, class:"btn btn-primary" %>
