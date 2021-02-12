@@ -4,12 +4,13 @@ class CocktailsController < ApplicationController
   end
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       flash[:success] = "cocktail successfully created"
-      redirect_to @cocktail
+      redirect_to cocktail_path(@cocktail)
     else
       flash[:error] = "Something went wrong"
       render 'new'
